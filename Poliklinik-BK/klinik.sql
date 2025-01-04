@@ -41,8 +41,8 @@ CREATE TABLE `daftar_poli` (
 --
 
 INSERT INTO `daftar_poli` (`id`, `id_pasien`, `id_jadwal`, `keluhan`, `no_antrian`, `status_periksa`) VALUES
-(1, 18, 11, 'Aduh aku sakit perut', 0, 'Selesai'),
-(2, 24, 11, 'Asam lambunk', 0, 'Selesai');
+(1, 18, 11, 'sakit gigi', 0, 'Selesai'),
+(2, 24, 11, 'demam', 0, 'Selesai');
 
 -- --------------------------------------------------------
 
@@ -77,9 +77,8 @@ CREATE TABLE `dokter` (
 --
 
 INSERT INTO `dokter` (`id`, `username`, `password`, `nama`, `alamat`, `no_hp`, `id_poli`) VALUES
-(2, 'andy', '123', ' Andy', 'Los Angeles', ' 08123456789', 26),
-(3, '', '', 'Bambang Sugeng', 'New York', '08123456789', 7),
-(6, 'jessy', '123', 'Jessy', 'New York', '08123456789', 7);
+(2, 'Untung', '1234', 'Untung', 'Ungaran', ' 082350361580', 26),
+(6, 'Taufik', '123', 'Taufik', 'Semarang', '082350361580', 7);
 
 -- --------------------------------------------------------
 
@@ -127,9 +126,8 @@ CREATE TABLE `obat` (
 
 INSERT INTO `obat` (`id`, `nama_obat`, `kemasan`, `harga`) VALUES
 (1, 'Paracetamol Super', 'Sachet', 55000),
-(2, 'Tolak Angin Super', 'Sachet', 35000),
-(8, 'OBH', 'Botol', 100000),
-(12, 'Paratusin Super', 'Tablet', 50000);
+(2, 'Obat Sirup', 'Botol', 35000),
+(8, 'Catafalm', 'Tablet', 100000);
 
 -- --------------------------------------------------------
 
@@ -153,8 +151,8 @@ CREATE TABLE `pasien` (
 --
 
 INSERT INTO `pasien` (`id`, `username`, `password`, `nama`, `alamat`, `no_ktp`, `no_hp`, `no_rm`) VALUES
-(18, 'buzz', '123', 'Buzz', 'New York', '84520828', '08123456789', '202312-1'),
-(24, 'sid', '123', 'Sid', 'Los Angeles', '84520828', '08123456789', '202312-2');
+(18, 'Bejo', '123', 'Bejo', 'Genuk', '11223344556677', '082350361580', '202312-1'),
+(24, 'Bagong', '123', 'Bagong', 'Demak', '77665544332211', '082350361580', '202312-2');
 
 -- --------------------------------------------------------
 
@@ -175,8 +173,8 @@ CREATE TABLE `periksa` (
 --
 
 INSERT INTO `periksa` (`id`, `id_daftar_poli`, `tgl_periksa`, `catatan`, `biaya_periksa`) VALUES
-(2, 2, 'Kamis', 'Minum kopi yang banyak', 55000),
-(3, 2, 'Kamis', 'Minum susu', 205000);
+(2, 2, 'Kamis', 'Minum resep yang sesuai', 55000),
+(3, 2, 'Kamis', 'istirahat yang banyak', 205000);
 
 -- --------------------------------------------------------
 
@@ -195,8 +193,8 @@ CREATE TABLE `poli` (
 --
 
 INSERT INTO `poli` (`id`, `nama_poli`, `keterangan`) VALUES
-(7, 'Poli Super Duper', 'Mantab Sekali'),
-(26, 'Poli Maju Makmur', 'Sangat bagus');
+(7, 'Poli Gigi', 'Gigi'),
+(26, 'Poli Umum', 'Umum');
 
 -- --------------------------------------------------------
 
